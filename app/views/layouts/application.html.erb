@@ -10,6 +10,13 @@
 <body>
 
 <%= render 'layouts/header' %>
+<%if flash %>
+  <%flash.each do |k,v|%>
+  <div class='error'>
+  <p><%=v%></p>
+  </div>
+  <%end%>
+<%end%>
 <%= yield %>
 
 </body>
